@@ -1,0 +1,28 @@
+Using 'libreoffice --headless --convert-to csv filename.xls'
+-------------------------------------------------------------------------------
+# alias tocsv='libreoffice --headless --convert-to csv'
+
+	$ tocsv filename.xls or filename.ods.... 
+	$ cat filename.csv
+	Foo,Bar,Baz
+	1,2,3
+	123.6,7.89,
+	2012/05/14,,
+	The,last,Line
+
+
+OR you can install a new program name gnumeric
+-------------------------------------------------------------------------------
+	# sudo apt-get install gnumeric
+	The Gnumeric spreadsheet application comes with a command line utility 
+	called ssconvert that can convert between a variety of spreadsheet formats:
+
+	$ ssconvert Book1.xlsx newfile.csv
+	Using exporter Gnumeric_stf:stf_csv
+	
+	$ cat newfile.csv 
+	Foo,Bar,Baz
+	1,2,3
+	123.6,7.89,
+	2012/05/14,,
+	The,last,Line
