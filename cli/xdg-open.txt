@@ -1,0 +1,71 @@
+# 'xdg-open' — opens a file or URL in the user’s preferred application
+
+xdg-open opens a file or URL in the user's preferred application. If a URL is provided the URL will be opened in the user's preferred web browser. If a file is provided the file will be opened in the preferred application for files of that type. xdg-open supports file, ftp, http and https URLs.
+
+xdg-open is for use inside a desktop session only. It is not recommended to use xdg-open as root.
+
+Syntax: xdg-open { file | URL }
+
+Examples: 
+----------------------------------------------------------------------------------------------------------------------------------
+	1) Open url: 
+		* Syntax: xdg-open 'url-link'
+		
+		a) xdg-open 'https://nahid-hassan.github.io/'
+		b) xdg-open 'https://github.com/Nahid-Hassan'
+
+	2) Open file: 
+		* Syntax xdg-open /../file_path/../../file_name
+
+		a) xdg-open ~/.bash_aliases
+		b) xdg-open /media/nahid/data-center/github-repo/LFS10x/.bash_aliases
+
+		c) xdg-open ~/Music/alone.mp4
+		d) xdg-open ~/Documents/Beautiful-Bangladesh.jpg
+		e) xdg-open ~/Downloads/Dark-side.pdf
+
+Exit Codes:
+----------------------------------------------------------------------------------------------------------------------------------
+	An exit code of 0 indicates success while a non-zero exit code 	indicates failure. The following failure codes can be returned:	
+	
+		1) Error in command line syntax.
+		2) One of the files passed on the command line did not exist.
+		3) A required tool could not be found.
+		4) The action failed.
+	
+	Available options:
+		--help  Show command synopsis.
+		--manual Show this manualpage.
+		--version Show the xdg-utils version information.
+	
+Some question about xdg-open and it's solution:
+----------------------------------------------------------------------------------------------------------------------------------
+	1) How to set which application is launched by xdg-open?
+
+		All of the above answers are basically correct, depending on what you're doing and how the programs you're using are invoking things. For me, the problem was that my terminal emulator (Tilix) was still opening the wrong browser (Firefox instead of Chrome), as well as xdg-open foobar.html also opened the wrong browser. Chrome said in the settings: "
+
+		Eventually I figured out that there's also xdg-mime:
+
+			$ xdg-mime query default x-scheme-handler/http
+			firefox.desktop
+			$ xdg-mime query default x-scheme-handler/https
+			firefox.desktop
+			That is not correct, so I changed those to:
+
+			$ xdg-mime default google-chrome.desktop 'x-scheme-handler/http'
+			$ xdg-mime default google-chrome.desktop 'x-scheme-handler/https'
+			Then there's also bindings for 'text/html', which I also chang	ed:
+
+			$ xdg-mime default google-chrome.desktop 'text/html'
+			This, in combination with making sure that the following are also set correctly:
+
+			the BROWSER environment variable
+			sensible-browser (/usr/bin/sensible-browser, a wrapper script that tries to launch some of the other items in this list)
+			gnome-www-browser (/usr/bin/gnome-www-browser, a symlink to /etc/alternatives/gnome-www-browser)
+			x-www-browser (/usr/bin/x-www-browser, a symlink to /etc/alternatives/x-www-browser
+			www-browser (/usr/bin/www-browser, a symlink to /etc/alternatives/www-browser)
+			all of the "alternative" entries (see 
+			update-alternatives --get-selections for a list) that point to a browser.
+			The GConf database (See Isaiah's answer)
+			This finally opens the correct browser for most situations on my desktop. 2018 is surely the year of linux on the desktop.
+
