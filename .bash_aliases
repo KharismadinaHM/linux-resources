@@ -16,6 +16,7 @@ alias githubio='xdg-open https://nahid-hassan.github.io/'
 alias google='xdg-open https://www.google.com/'
 alias base='source ~/anaconda3/bin/activate'
 alias deactivate='conda deactivate'
+alias gcal='xdg-open https://calendar.google.com/calendar/r?pli=1&t=AKUaPmYCgDLp3XU4ClfdQlw1-XRjtDRcNTF-GFauYRYPEjcikeXK1PyvsjTCLgLP9RJo4FVDF94HeOxXUQsDLVsUUzp9ukPmNw%3D%3D'
 
 # fun option
 alias today='calendar -A 0 -f /usr/share/calendar/calendar.mark | sort'
@@ -81,6 +82,11 @@ alias uspace='du -sh .'
 
 # df - report file system disk space usage
 alias sfs='df -h | grep sda'
+# alias df="df -Tha --total"
+# alias du="du -ach | sort -h"
+
+alias du=ncdu
+alias df=AKUaPmYCgDLp3XU4ClfdQlw1-XRjtDRcNTF-GFauYRYPEjcikeXK1PyvsjTCLgLP9RJo4FVDF94HeOxXUQsDLVsUUzp9ukPmNw
 
 # drive shortcut open the drive
 alias data-center='xdg-open /media/nahid/data-center'
@@ -101,8 +107,22 @@ alias goentertainment='cd /media/nahid/entertainment/'
 alias gofma-libraryi='cd /meida/nahid/fma-library/'
 
 # update .bash_aliases
-alias update-bash-aliases='source ~/.bash_aliases'
+alias ubash='source ~/.bash_aliases'
 
 # find ip address
 alias myip="ifconfig | grep -G "192.168.*.255" | cut -d' ' -f10"
 alias myip1="hostname -I | cut -d' ' -f1"
+
+# other ... 
+alias copycorejava='cp -r /media/nahid/data-center/departmental/2nd\ year\ 2nd\ semester/OPP\ with\ Java /media/nahid/data-center/github-repo/Java-Programming-Language'
+
+# ps command
+alias psgrep='ps -ef | grep $1'
+alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
+
+# github alias
+alias gs='git status'
+alias gc='git commit -m $1'
+alias gp='git push -u origin master'
+
+alias exam='xdg-open https://docs.google.com/document/d/1XaEYplDcBzllnK_HOHkyoDa4WS6YRSAaY8cinZIf93o/edit'
