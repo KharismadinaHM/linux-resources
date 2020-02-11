@@ -86,7 +86,6 @@ alias sfs='df -h | grep sda'
 # alias du="du -ach | sort -h"
 
 alias du=ncdu
-alias df=AKUaPmYCgDLp3XU4ClfdQlw1-XRjtDRcNTF-GFauYRYPEjcikeXK1PyvsjTCLgLP9RJo4FVDF94HeOxXUQsDLVsUUzp9ukPmNw
 
 # drive shortcut open the drive
 alias data-center='xdg-open /media/nahid/data-center'
@@ -110,7 +109,6 @@ alias gofma-libraryi='cd /meida/nahid/fma-library/'
 alias ubash='source ~/.bash_aliases'
 
 # find ip address
-alias myip="ifconfig | grep -G "192.168.*.255" | cut -d' ' -f10"
 alias myip1="hostname -I | cut -d' ' -f1"
 
 # other ... 
@@ -126,3 +124,17 @@ alias gc='git commit -m $1'
 alias gp='git push -u origin master'
 
 alias exam='xdg-open https://docs.google.com/document/d/1XaEYplDcBzllnK_HOHkyoDa4WS6YRSAaY8cinZIf93o/edit'
+
+alias dhalchut='xdg-open https://www.facebook.com/groups/1713320778742013/'
+
+alias mc='mc -b'
+
+alias tlpstat='sudo tlp-stat -s'
+alias tlpstart='sudo systemctl tlp start'
+
+alias dept='xdg-open https://drive.google.com/drive/folders/1MU_wg3jBnRJhJmPjL9Jdq3w_1CXKHd4S'
+
+alias gitresetlastcommit='git reset HEAD~'
+
+alias cn='ping 8.8.8.8'
+
