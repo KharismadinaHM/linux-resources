@@ -1,0 +1,4 @@
+2019-01-01 | server request | windows | ping-2.000
+2019-02-01 | server request | mac | ping-2.000
+2019-02-01 | server request | windows | ping-12.000
+2019-02-01 | server request | linux | ping-6.000
