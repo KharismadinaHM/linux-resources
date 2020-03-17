@@ -18,6 +18,8 @@ alias base='source ~/anaconda3/bin/activate'
 alias deactivate='conda deactivate'
 alias gcal='xdg-open https://calendar.google.com/calendar/r?pli=1&t=AKUaPmYCgDLp3XU4ClfdQlw1-XRjtDRcNTF-GFauYRYPEjcikeXK1PyvsjTCLgLP9RJo4FVDF94HeOxXUQsDLVsUUzp9ukPmNw%3D%3D'
 
+alias gtrans="xdg-open https://translate.google.com/"
+
 # fun option
 alias today='calendar -A 0 -f /usr/share/calendar/calendar.mark | sort'
 
@@ -86,6 +88,7 @@ alias sfs='df -h | grep sda'
 # alias du="du -ach | sort -h"
 
 alias du=ncdu
+alias df=AKUaPmYCgDLp3XU4ClfdQlw1-XRjtDRcNTF-GFauYRYPEjcikeXK1PyvsjTCLgLP9RJo4FVDF94HeOxXUQsDLVsUUzp9ukPmNw
 
 # drive shortcut open the drive
 alias data-center='xdg-open /media/nahid/data-center'
@@ -109,6 +112,7 @@ alias gofma-libraryi='cd /meida/nahid/fma-library/'
 alias ubash='source ~/.bash_aliases'
 
 # find ip address
+alias myip="ifconfig | grep -G "192.168.*.255" | cut -d' ' -f10"
 alias myip1="hostname -I | cut -d' ' -f1"
 
 # other ... 
@@ -138,3 +142,8 @@ alias gitresetlastcommit='git reset HEAD~'
 
 alias cn='ping 8.8.8.8'
 
+alias udacity='xdg-open https://classroom.udacity.com/me'
+
+alias grep='grep -i'
+
+alias todo='subl /media/nahid/data-center/sdt-inc/to-do.txt'
