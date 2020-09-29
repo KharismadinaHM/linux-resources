@@ -1,2 +1,2 @@
-# LFS10x
-Linux OS. Collection of all the resources. 
+# Linux Resources
+My Linux journey.........
