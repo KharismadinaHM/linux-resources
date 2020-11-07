@@ -13,8 +13,7 @@ alias mail='xdg-open https://mail.google.com/mail/u/0/'
 alias drive='xdg-open https://drive.google.com/drive/my-drive'
 alias linkedin='xdg-open https://www.linkedin.com/in/md-nahid-hassan-a3639317a/'
 alias githubio='xdg-open https://nahid-hassan.github.io/'
-alias google='xdg-open https://www.google.com/'
-alias base='source ~/anaconda3/bin/activate'
+alias base='source ~/miniconda3/bin/activate'
 alias deactivate='conda deactivate'
 alias gcal='xdg-open https://calendar.google.com/calendar/r?pli=1&t=AKUaPmYCgDLp3XU4ClfdQlw1-XRjtDRcNTF-GFauYRYPEjcikeXK1PyvsjTCLgLP9RJo4FVDF94HeOxXUQsDLVsUUzp9ukPmNw%3D%3D'
 
@@ -26,12 +25,12 @@ alias today='calendar -A 0 -f /usr/share/calendar/calendar.mark | sort'
 # Add safety nets
 # do not delete / or prompt if deleting more than 3 files at a time #
 alias rm='rm -I --preserve-root'
- 
+
 # confirmation #
 alias mv='mv -i'
 alias cp='cp -i'
 alias ln='ln -i'
- 
+alias you18='youtube-dl -f 18 '
 # Parenting changing perms on / #
 alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
@@ -52,15 +51,13 @@ alias ipe='curl ipinfo.io/ip'
 # Control cd command behavior
 alias .='cd ../'
 alias ..='cd ../../'
-alias ...='cd ../../../'
-alias ....='cd ../../../../'
 
 # Control ls command output
 
 ## Colorize the ls output ##
-alias ls='ls --color=auto' 
+alias ls='ls --color=auto'
 ## Use a long listing format ##
-alias ll='ls -lht'
+alias ll='ls -l'
 ## Show hidden files ##
 alias l.='ls -d .* --color=auto'
 
@@ -88,7 +85,6 @@ alias sfs='df -h | grep sda'
 # alias du="du -ach | sort -h"
 
 alias du=ncdu
-alias df=AKUaPmYCgDLp3XU4ClfdQlw1-XRjtDRcNTF-GFauYRYPEjcikeXK1PyvsjTCLgLP9RJo4FVDF94HeOxXUQsDLVsUUzp9ukPmNw
 
 # drive shortcut open the drive
 alias data-center='xdg-open /media/nahid/data-center'
@@ -102,11 +98,11 @@ alias gdrive='google-chrome /media/nahid/'
 alias ghome='google-chrome /home/nahid/'
 alias ggoogle='google-chrome http://www.google.com/'
 
-# shortcut for cd command 
-alias godata-center='cd /media/nahid/data-center/'
+# shortcut for cd command
+alias godata-center='cd /media/nahid/data-center1/'
 alias goadmin-user='cd /media/nahid/admin-user/'
 alias goentertainment='cd /media/nahid/entertainment/'
-alias gofma-libraryi='cd /meida/nahid/fma-library/'
+alias gofma-library='cd /media/nahid/fma-library/'
 
 # update .bash_aliases
 alias ubash='source ~/.bash_aliases'
@@ -115,7 +111,7 @@ alias ubash='source ~/.bash_aliases'
 alias myip="ifconfig | grep -G "192.168.*.255" | cut -d' ' -f10"
 alias myip1="hostname -I | cut -d' ' -f1"
 
-# other ... 
+# other ...
 alias copycorejava='cp -r /media/nahid/data-center/departmental/2nd\ year\ 2nd\ semester/OPP\ with\ Java /media/nahid/data-center/github-repo/Java-Programming-Language'
 
 # ps command
@@ -147,3 +143,22 @@ alias udacity='xdg-open https://classroom.udacity.com/me'
 alias grep='grep -i'
 
 alias todo='subl /media/nahid/data-center/sdt-inc/to-do.txt'
+alias tasin='google-chrome --incognito https://www.youtube.com/results?search_query=thakur+mar+jhuli' 
+
+alias coursera='open https://www.coursera.org/programs/rajshahi-university-on-coursera-uvht'
+alias python='python3'
+alias tenda='open http://192.168.0.1/index.html'
+alias django='open https://docs.djangoproject.com/en/3.1/'
+alias update='sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get autoremove && sudo apt-get autoclean'
+
+# search utility
+alias attack='s-search'
+alias tisha='google-chrome --incognito https://www.youtube.com/results?search_query=onnorokom+pathshala'
+alias linklearn='open https://www.linkedin.com/learning/me/in-progress'
+alias ls='exa'
+# conda config --set auto_activate_base false
+alias kawser='open https://www.youtube.com/results?search_query=thakur+ma+juli+bangla'
+alias gci='google-chrome --incognito &'
+alias disableinsertkey='xmodmap -e "keycode 118="'
+alias withgoogle='open https://techdevguide.withgoogle.com/'
+alias hackthis='open https://defendtheweb.net/?hackthis'
